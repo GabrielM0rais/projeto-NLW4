@@ -6,7 +6,7 @@ export class CreateUsers1614213069410 implements MigrationInterface {
         await queryRunner.createTable(
             new Table({ 
                 name: "users",
-                    columns: [ {
+                columns: [ {
                         name: "id",
                         type: "uuid",
                         isPrimary: true
