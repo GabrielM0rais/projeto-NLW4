@@ -1,6 +1,10 @@
+import "reflect-metadata";
 import express from 'express';
+import "./database"
+import { router } from "../router";
 
 const app = express();
+
 
 /**
  * GET => buscar
@@ -10,16 +14,7 @@ const app = express();
  * PATCH => alteração especifica
 */
 
-    // http://localhost:8080/users
-app.get("/", (req, res) => {
-    return res.json({message: "Hello World - NLW4"});
-})
-
-// 1 param => Rota (RECURSO DA API)
-// 2 param => (requeste, response)
-
-app.post("/", (req, res) => {
-    return res.json({message: "Dados salvos com sucesso"});
-});
+app.use(express.json());
+app.use(router)
 
 app.listen(3333, () => console.log("Server is running!"));
