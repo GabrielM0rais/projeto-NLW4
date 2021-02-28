@@ -27,4 +27,5 @@ class SurveysController{
     }
 }
 
-export { SurveysController }
+export { SurveysController };
+

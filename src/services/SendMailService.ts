@@ -1,7 +1,6 @@
-import nodemailer, { Transporter } from 'nodemailer';
-import { resolve } from 'path';
 import fs from 'fs';
 import handlebars from 'handlebars';
+import nodemailer, { Transporter } from 'nodemailer';
 
 class SendMailService {
     private client: Transporter;
